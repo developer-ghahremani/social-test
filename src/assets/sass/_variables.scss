@@ -1,0 +1,97 @@
+$primary: #2d2424;
+$secondary: #5c3d2e;
+$brown: #b85c38;
+
+$colors-list: (
+  primary: $primary,
+  secondary: $secondary,
+  brown: $brown,
+);
+
+@each $name, $color in $colors-list {
+  .bg-#{$name} {
+    background-color: $color;
+  }
+  .color-#{$name} {
+    color: $color;
+  }
+  .bg-trans-#{$name} {
+    background-color: rgba($color, 0.9);
+  }
+}
+
+@mixin text-sizes {
+  @for $i from 1 through 5 {
+    .text-size-#{$i} {
+      font-size: $i/3 * 1rem !important;
+    }
+    .text-size-#{$i} {
+      font-size: $i/3 * 1rem !important;
+    }
+    .text-size-#{$i} {
+      font-size: $i/3 * 1rem !important;
+    }
+    .text-size-#{$i} {
+      font-size: $i/3 * 1rem !important;
+    }
+    .text-size-#{$i} {
+      font-size: $i/3 * 1rem !important;
+    }
+  }
+}
+
+@mixin paddings {
+  @for $i from 1 through 5 {
+    .p-#{$i} {
+      padding: $i/3 * 1rem !important;
+    }
+    .pt-#{$i} {
+      padding-top: $i/3 * 1rem !important;
+    }
+    .pb-#{$i} {
+      padding-bottom: $i/3 * 1rem !important;
+    }
+    .pl-#{$i} {
+      padding-left: $i/3 * 1rem !important;
+    }
+    .pr-#{$i} {
+      padding-right: $i/3 * 1rem !important;
+    }
+    .px-#{$i} {
+      padding: 0px $i/3 * 1rem !important;
+    }
+    .py-#{$i} {
+      padding: $i/3 * 1rem 0px !important;
+    }
+  }
+}
+
+@mixin margins {
+  @for $i from 1 through 5 {
+    .m-#{$i} {
+      margin: $i/3 * 1rem !important;
+    }
+    .mt-#{$i} {
+      margin-top: $i/3 * 1rem !important;
+    }
+    .mb-#{$i} {
+      margin-bottom: $i/3 * 1rem !important;
+    }
+    .ml-#{$i} {
+      margin-left: $i/3 * 1rem !important;
+    }
+    .mr-#{$i} {
+      margin-right: $i/3 * 1rem !important;
+    }
+    .mx-#{$i} {
+      margin: 0px $i/3 * 1rem !important;
+    }
+    .my-#{$i} {
+      margin: $i/3 * 1rem 0px !important;
+    }
+  }
+}
+
+@include margins;
+@include paddings;
+@include text-sizes;

@@ -3,14 +3,12 @@ import { Search } from "@mui/icons-material";
 import ReactCountryFlag from "react-country-flag";
 import { IBox } from "../../components/general";
 
-type Props = {};
-
 const Navbar = () => {
   return (
     <IBox display="flex" alignItems="center" justifyContent="space-between">
+      <Search />
       <IBox display="flex" alignItems="center">
-        <Avatar />
-        <IBox ml="1rem">
+        <IBox mr="1rem" alignItems="center">
           <ReactCountryFlag
             countryCode="Ir"
             style={{
@@ -20,8 +18,8 @@ const Navbar = () => {
           />
           <p>Reza Ghahremani</p>
         </IBox>
+        <Avatar />
       </IBox>
-      <Search />
     </IBox>
   );
 };
